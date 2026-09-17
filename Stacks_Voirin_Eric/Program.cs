@@ -6,7 +6,7 @@ namespace Stacks_Voirin_Eric
     class Program
     {
         static void Main(string[] args)
-        {
+        {// Create a stack of cards
             Card[] myCardsArray = new Card[]
             {
                 new Card("Ace", "Spades"),
@@ -20,6 +20,7 @@ namespace Stacks_Voirin_Eric
                 new Card("Ace", "Diamonds")
             };
 
+            // Create a stack of cards using the array
             Stack<Card> startingDeck = new Stack<Card>(myCardsArray);
 
             Console.WriteLine("Cards in Deck:");
@@ -27,9 +28,9 @@ namespace Stacks_Voirin_Eric
             {
                 Console.WriteLine($"The {card.Number} of {card.Suit}!");
             }
-
+            // Display the number of cards in the deck
             Console.WriteLine($"Cards in the deck: {startingDeck.Count}");
-
+            // Create a list of cards to represent the player's hand
             List<Card> myHand = new List<Card>();
             myHand.Add(new Card("Jack", "Diamonds"));
             myHand.Add(new Card("8", "Hearts"));
@@ -40,12 +41,13 @@ namespace Stacks_Voirin_Eric
             {
                 myHand.Add(startingDeck.Pop());
             }
-
+            // Display the number of cards in the deck
             Console.WriteLine($"Cards in the deck: {startingDeck.Count}");
-
+            // Display the cards in the player's hand
             startingDeck.Push(myHand[0]);
             myHand.RemoveAt(0);
 
+            // Display the cards in the deck
             Console.WriteLine("Cards in Deck:");
             foreach (Card card in startingDeck)
             {

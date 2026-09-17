@@ -6,7 +6,7 @@ namespace Stacks_Voirin_Eric
 {
     internal class Card
     {
-
+        // Properties for the card's number and suit
         public string Number { get; }
 
         public string Suit { get; }
